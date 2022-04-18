@@ -10,9 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_18_062846) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_18_064118) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "awards", force: :cascade do |t|
+    t.string "award"
+    t.string "company"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "credits", force: :cascade do |t|
     t.string "developer"
@@ -20,6 +28,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_18_062846) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["project_id"], name: "index_credits_on_project_id"
+  end
+
+  create_table "experiences", force: :cascade do |t|
+    t.string "title"
+    t.string "company"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "images", force: :cascade do |t|
@@ -51,6 +67,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_18_062846) do
     t.text "description"
     t.string "github"
     t.string "website"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string "skill"
+    t.float "comfort"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
