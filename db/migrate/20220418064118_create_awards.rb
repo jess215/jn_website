@@ -4,6 +4,7 @@ class CreateAwards < ActiveRecord::Migration[7.0]
       t.string :award
       t.string :company
       t.text :description
+      t.boolean :include
 
       t.timestamps
     end

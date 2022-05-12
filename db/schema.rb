@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_18_064118) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_09_215558) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_18_064118) do
     t.string "award"
     t.string "company"
     t.text "description"
+    t.boolean "include"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,10 +31,20 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_18_064118) do
     t.index ["project_id"], name: "index_credits_on_project_id"
   end
 
+  create_table "educations", force: :cascade do |t|
+    t.string "degree"
+    t.string "school"
+    t.text "description"
+    t.boolean "include"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "experiences", force: :cascade do |t|
     t.string "title"
     t.string "company"
     t.text "description"
+    t.boolean "include"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -67,6 +78,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_18_064118) do
     t.text "description"
     t.string "github"
     t.string "website"
+    t.boolean "include"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -74,6 +86,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_18_064118) do
   create_table "skills", force: :cascade do |t|
     t.string "skill"
     t.float "comfort"
+    t.boolean "include"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -4,6 +4,7 @@ class CreateExperiences < ActiveRecord::Migration[7.0]
       t.string :title
       t.string :company
       t.text :description
+      t.boolean :include
 
       t.timestamps
     end
