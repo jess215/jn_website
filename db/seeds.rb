@@ -59,7 +59,7 @@ Skill.create(skill:'Project Management', comfort:'', include:'false')
 
 ########## EXPERIENCE ##########
 
-Experience.create(title:'AP IT Analyst', company:'ARUP Laboratories', description:'Generated reports for Anatomic Pathology department utilizing SQL, SSMS, and SSRS. Tracked work through Jira.', include:'true')
+Experience.create(title:'AP IT Analyst', company:'ARUP Laboratories', description:'Generated reports for Anatomic Pathology department utilizing SQL. Pulled data that was used in quality assurance, productivity, and research. Developed reports that would be utilized as tools to manage workflow for technicians in the labs.', include:'true')
 Experience.create(title:'Medical Transcriptionist', company:'ARUP Laboratories', description:'', include:'false')
 
 ########## EDUCATION ##########
@@ -68,7 +68,7 @@ Education.create(degree:'Full-Stack Certificate', school:'DevPoint Labs', descri
 
 ########## PROJECTS ##########
 
-fp = Project.create(name:'Fresh Potatoes', subtitle:'', description:'', github:'https://github.com/brendacassita/FreshPotatoes', website:'https://fresher-potatoes.herokuapp.com/', include:'true')
+fp = Project.create(name:'Fresh Potatoes', subtitle:'Where Expectations Meet Reality', description:'A movie database to rate movies before viewing and again after viewing.', github:'https://github.com/brendacassita/FreshPotatoes', website:'https://fresher-potatoes.herokuapp.com/', include:'true')
 fcf = Project.create(name:'Fillmore Country Floral', subtitle:'', description:'', github:'', website:'', include:'true')
 
 ########## CREDITS ##########
